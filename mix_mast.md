@@ -1,5 +1,7 @@
 # 🎶 Miksing og mastering
 
+![alt text](mix.png)
+
 Dette hefter gir en innføring og miksing og mastering. Den retter seg mot nybegynner som jobber hobbypreget og som trenger hjelp til å komme i gang, lære seg noe om teknikker, terminologi og bestandeler. Vi jobber på Logic Pro og ser ikke på audio-problematikk eller vokal.
 
 Med miksing mener man det å balanserer instrumentene ift. til hverandre, sørge for at de har nok luft, at de har passe relativt volum, at stereobildet og arrangement oppleves optimalt, samtidig som man unngår clipping og har nok headroom til effektiv mastering. Mastering består i den avsluttende prosesseringen av output-lyden, hvilket inkludere arbeid med kompressorer, limiters etc. bl.a. for å øke det totale lydnivået (loudness) opp til kommersielt nivå.
@@ -193,7 +195,7 @@ Release angir hvor lenge (i ms) kompressoren jobber etter aktivisering før den 
 
 Makeup Gain juster volumet opp igjen etter at kompressoren har dempet signalet. Man justerer vanligvis slik at volumet etter kompresjon matcher volumet før. Blir det økning, vil ørene lett tro på en forbedring, selv om lyden bare er høyere.
 
-👉 *Transienter er veldig korte (noen få millisekunder), plutselige topper i lydsignalet, vanligvis helt i starten av en lyd, som f.eks. fra en gitar eller et piano*
+👉 *Transienter er veldig korte, plutselige topper i lydsignalet (på noen få millisekunder), vanligvis helt i starten av en lyd, som f.eks. fra en gitar eller et piano*
 
 👉 *Flere kompressorer har en Auto Gain-checkbox som setter Makeup Gain automatisk. Mange skrur denne av for å høre virkningen av selve kompresjonen under arbeid.*
 
@@ -521,6 +523,78 @@ High-shelf betegner det å løfte volumet til noen høye frekvenser (fra angitt 
 👉 *Ikke booste mange frekvenser. Dette gir mer rot og mindre headroom. Ofte er det bedre å kutte i andre spor*.
 
 👉 *Hvis miksen føles uklar selv etter EQ, er problemet ofte for mange lag i mid-range (300–2000 Hz) – ikke dårlig EQ*.
+
+
+Her har vi en liten oppdeling av frekvensspekteret som kan være nyttig.
+
+
+1. **Ca. 200–500 Hz: Mud / grums**
+
+Dette området gir ofte:
+
+- uklar miks
+- lite definisjon
+- “tåke” i lydbildet
+
+Problemet oppstår når mange instrumenter har energi her samtidig:
+
+pads
+gitar
+piano
+synths
+vokal
+
+Typisk løsning: -2 til -4 dB cut på *enkelte* spor i dette området.
+
+2. **ca. 500–900 Hz: Boxy / papp-lyd**
+
+Dette området kan gi en litt:
+
+- hul
+- pappaktig
+- boksete lyd
+
+Vanlig i:
+
+- gitar
+- synth leads
+- trommeloops
+
+Små kutt her kan gjøre miksen renere og mer moderne.
+
+3. **Ca. 2–4 kHz: Hardhet / skarphet**
+
+Dette området er veldig sensitivt for øret. Det gir:
+
+- tydelighet
+- attack
+- presence
+
+Men for mye gir:
+
+- hard lyd
+- lyttetretthet
+
+Dette er ofte problemområdet i:
+
+- hi-hats
+- aggressive synths
+- gitar
+
+Løsning kan være -1 til -3 dB hvis noe føles skarpt.
+
+
+4. **8–12 kHz; Air / luft**
+
+Et ekstra viktig område. Her kan man ofte gjøre små boosts for å gi:
+
+- mer åpen lyd
+- mer detalj
+
+Men overdrivelse kan gi:
+
+- hiss
+- digital skarphet
 
 --- 
 
