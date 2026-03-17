@@ -2,23 +2,25 @@
 
 ![alt text](mix.png)
 
-Dette hefter gir en innføring og miksing og mastering. Den retter seg mot nybegynner som jobber hobbypreget og som trenger hjelp til å komme i gang, lære seg noe om teknikker, terminologi og bestandeler. Vi jobber på Logic Pro og ser ikke på audio-problematikk eller vokal.
+Dette hefter gir en innføring og miksing og mastering. Den retter seg mot nybegynner som jobber hobbypreget og som trenger hjelp til å komme i gang, lære seg noe om teknikker, terminologi og bestandeler. Jeg er ingen ekspert. Der erfarne folk har annet å si, lytt til dem, ikke meg. Men dette heftet bør være til hjelp som utgangspunkt.
 
-Med miksing mener man det å balanserer instrumentene ift. til hverandre, sørge for at de har nok luft, at de har passe relativt volum, at stereobildet og arrangement oppleves optimalt, samtidig som man unngår clipping og har nok headroom til effektiv mastering. Mastering består i den avsluttende prosesseringen av output-lyden, hvilket inkludere arbeid med kompressorer, limiters etc. bl.a. for å øke det totale lydnivået (loudness) opp til kommersielt nivå.
+Vi jobber i Logic Pro og ser ikke på audio-problematikk eller vokal.
 
-Vi begynner med mastering for å se hva som teknisk bør vektlegges i miksingen.
+Med miksing mener man det å balanserer instrumentene ift. til hverandre, sørge for at de har nok luft, at de har passe relativt volum, at stereobildet og arrangement har dybde og oppleves optimalt, samtidig som man unngår clipping og har nok headroom til effektiv mastering. Mastering består i den avsluttende prosesseringen av output-lyden, hvilket inkludere arbeid med kompressorer, limiters etc. bl.a. for å øke det totale lydnivået (loudness) opp til kommersielt nivå.
+
+Vi begynner med mastering for å se på visse ting som bør vektlegges i miksingen.
 
 ---
 
 ## Generelle tips
 
-I tillegg til dette er det en del generelle tips i prosessen som er viktige:
+Det er også en del generelle tips i prosessen som er viktige:
 
 1. Ta hyppige pauser. Ørene blir fort “blinde”. Jobb aldri lenger enn en kanskje 30–40 min før du tar en pause på 10 min. 
 
 2. Ikke venn deg til å spille høyt i hodetelefoner. Skal man jobbe mye med musikk, vil dette være ensbetydende med tinnitus.
 
-3. Eksporter ofte og hør på dette i bilen, på andre høyttalere osv. Problemer avsluttes ofte først da.
+3. Eksporter ofte og hør på dette på andre høyttalere, i bilen osv. Problemer avsluttes ofte først da.
 
 4. Bruk en referanselåt. Importer en profesjonell låt i samme stil inn i prosjektet. Skru den ned så den har omtrent samme nivå som egen miks og sammenlign.
 
@@ -26,13 +28,13 @@ I tillegg til dette er det en del generelle tips i prosessen som er viktige:
 
 ## Mastering
 
-En vanlig problemstilling er at man ender opp med et produkt som er altfor lavt ift. profesjonell musikk. Man må skru opp lyden nesten mot maks for at volumet skal oppleves høyt. Selv om man har lagt seg så høyt som mulig uten clipping, blir sluttresultatet pulsete. (Clipping oppstår når lydsignalet blir høyere enn det digitale maksimumsnivået (0 dBFS). Da kuttes signaltoppene, lydbølger mister form og det oppstår forvrengning).
+En vanlig problemstilling i mastering er at man ender opp med et produkt som er altfor lavt ift. profesjonell musikk. Man må skru opp lyden nesten mot maks for at volumet skal oppleves høyt. Selv om man har lagt seg så høyt som mulig uten clipping, blir sluttresultatet pulsete. (Clipping oppstår når lydsignalet blir høyere enn det digitale maksimumsnivået (0 dBFS). Da kuttes signaltoppene, lydbølger mister form og det oppstår forvrengning).
 
-Det man gjør i miksingen er å legge seg et godt stykke under clipping-nivået i miksingen (master peaks rundt -6 dB er vanlig), for siden å stole på masteringen for å heve volumet.
+Det man gjør i miksingen er å legge seg et godt stykke under clipping-nivået (master peaks rundt -6 dB er vanlig), for siden å stole på masteringen til å heve volumet.
 
 I mastering i Logic Pro opererer man på på output-track'et, dvs. på Stereo Out. Man har i tillegg et master track, som er fint å bruke til fade in/fade out, men som ellers kun er for kontroll av flere output-kilder. Dvs. pugins som brukes i mastering legges etter hverandre i Stereo Out.
 
-Det er flere plugins som kan brukes, men det helt grunnleggende (det minimale som vi skal fokusere på) er:
+Det er flere plugins som kan brukes, men det helt grunnleggende (det minimale vi skal fokusere på) er:
 
 - Channel EQ
 - Compressor
@@ -47,16 +49,15 @@ Det fins også andre, som
 
 man kan fokusere mer på siden.
 
-Som regel er det kun små endringer som gjøres med EQ-frekvensene i mastering, men dette er naturlig det første "boksen" på Stereo Out. Kompressoren komprimerer lyden (dvs. den reduserer forskjellen mellom høye og lave nivåer (dynamikken)), mens limiteren stopper peaks hardt over et bestemt nivå (som f.eks. -1 dB, men på en intelligent måte). Til slutt har vi Loudness Meter som ikke påvirker lyden, men som er en måler for opplevd lydstyrke (ift. referansepunktet på maks digitalt nivå (0 dBFS)). Med dette får man et objektiv, tallbasert mål for endelig lydstyrke som man kan styre etter.
+Som regel er det kun små endringer som gjøres med EQ-frekvensene i mastering, men Channel EQ er naturlig det første "boksen" på Stereo Out. Den nest, Kompressoren, komprimerer lyden (dvs. den reduserer forskjellen mellom høye og lave nivåer (dynamikken)), mens Limiter stopper peaks hardt over et bestemt nivå (som f.eks. -1 dB, men på en intelligent måte). Til slutt har vi Loudness Meter som ikke påvirker lyden, men som er en måler for opplevd lydstyrke (ift. referansepunktet på maks digitalt nivå (0 dBFS)). Med denne får man et objektiv, tallbasert mål for endelig lydstyrke som man kan styre etter.
 
 ---
 
 ### Loudness Meter
 
-Loudness Meter kommer til slutt i kjeden, men må diskuteres først, siden den nevnes underveis i omtalen av de andre. Den gir altså et tall på lydstyrken. Denne oppgis i såkalte LUFS (Loudness Units relative to Full Scale). Meteret viser typisk:
+Loudness Meter kommer til slutt i kjeden, men må diskuteres først, siden den nevnes underveis i omtalen av de andre. Den gir altså et tall på lydstyrken, oppgitt i såkalte LUFS (Loudness Units relative to Full Scale). Meteret viser typisk:
 
 - Integrated LUFS → gjennomsnittlig loudness for hele låten
-
 - Short-term LUFS → loudness akkurat nå (målt over noen sekunder)
 
 og tallene kan illustreres ved:
@@ -67,7 +68,7 @@ og tallene kan illustreres ved:
  -8 LUFS  → veldig høy
 ```
 
-Integrated LUFS er den viktigste parameteren. Det forteller om låtens generelle lydnivå. Som referanse kan man nevne typisk lydnivå på vanlige låter hos:
+Integrated LUFS er den viktigste parameteren. Det forteller om låtens generelle lydnivå. Som referanse kan man nevne typisk lydnivå på vanlige låter på det følgende:
 
 | Plattform   | Loudness            |
 | ----------- | ------------------- |
@@ -77,9 +78,9 @@ Integrated LUFS er den viktigste parameteren. Det forteller om låtens generelle
 
 (EDM er et samlebegrep for elektronisk klubb- og dansemusikk (som house, techno, dubstep osv.))
 
-Integrated LUFS forteller selvsagt ikke alt. De fleste låter har en naturlig dynamikk mellom rolige og mer intense partier. Et for konstant nivå virker kunstig, flatt og livløst.
+Integrated LUFS forteller selvsagt ikke alt. De fleste låter har en naturlig dynamikk mellom rolige og intense partier. Et for konstant nivå virker flatt og livløst.
 
-Her er en balansert illustrasjon:
+Her er en mer balansert illustrasjon:
 
 ```python
 Intro       -18 LUFS
@@ -92,7 +93,7 @@ Outro       -16 LUFS
 
 ### Channel EQ
 
-Channel EQ er kun ment for små (typisk ±1–3 dB) avsluttende justeringer i frekvensbalansen. For store endringer kan endre karakteren og bør unngås, men man kan finjustere litt på midrange, justere high-pass eller low-cut etc.
+Channel EQ er kun ment for små (typisk ±1–3 dB) avsluttende justeringer i frekvensbalansen. Store endringer endre karakteren i lyden og bør unngås, men man kan finjustere litt på midrange, justere high-pass eller low-cut etc.
 
 ---
 
@@ -109,26 +110,19 @@ Det kan anbefales å begynne med
 
 Senere kan man eksperimentere med:
 
-| Type         | Karakter  |
-| ------------ | --------- |
-| Studio VCA   | punchy    |
-| Studio FET   | aggressiv |
-| Vintage Opto | smooth    |
+| Type       | Karakter |
+| ---------- | -------- |
+| Studio VCA | punchy   |
 
-
-#### Her er de viktigste parametrene.
+#### Viktige kompressor-parametre
 
 📌 **Input Gain**
 
-Input gain angir styrken på som signalet som sendes inn i kompressoren, altså nivået før kompresjonen skjer. Hvis man øker Input Gain, 
-vil mer av signalet går over Threshold og dermed gi mer kompresjon.
+Input gain angir styrken på som signalet som sendes inn i kompressoren, altså nivået før kompresjonen skjer. Hvis man øker Input Gain, vil mer av signalet går over Threshold og dermed gi mer kompresjon.
 
 📌 **Threshold**
 
-Signal over Threshold blir komprimert, signal under påvirkes ikke.
-
-- Lav Threshold betyr at mer av signalet blir komprimert.
-- Høy Threshold tilsier at bare de høyeste toppene komprimeres.
+Signal over Threshold blir komprimert, signal under påvirkes ikke. Høy Threshold tilsier f.eks. at bare de høyeste toppene komprimeres.
 
 Eksempel:
 
@@ -136,18 +130,18 @@ Eksempel:
 Threshold: -20 dB
 ```
 
-👉 *Merk at dB i Logic Pro er dBFS (decibels full scale) der 0 dBFS er maks digitalt nivå*
+👉 *Merk at dB i Logic Pro er dBFS (decibels full scale) der 0 dBFS er maks digitalt nivå. Dvs. at -20 dB er svakere enn f.eks. -19 dB.*
 
 📌 **Ratio**
 
-Bestemmer hvor hardt signalet presses ned etter Threshold.
+Ration bestemmer hvor hardt signalet presses ned over Threshold.
 
 | Ratio | Effekt            |
 | ----- | ----------------- |
 | 2:1   | mild kompresjon   |
 | 4:1   | vanlig kompresjon |
 | 8:1   | kraftig           |
-| ∞:1   | limiter           |
+| ∞:1   | Limiter           |
 
 Mer konkret
 
@@ -156,23 +150,25 @@ Mer konkret
 4:1:   4 dB over Threshold → blir til 1 dB over Threshold ut
 ```
 
-Eksempler
+Andre eksempler:
 
 ```python
-3:1
+Ratio:      3:1
 Threshold: -20 dB
 Input:     -17 dB (3 over)
-3 over blir til 1 over, altså output -19 dB
+
+3 dB over inn, gir 1 dB over ut (-19 dB)
 ```
 
 ```python
-4:1
+Ratio:      4:1
 Threshold: -20 dB
 Input:     -17 dB (3 over)
-3 over blir til 3*1/4 = 0,75 over, altså output -19.25 dB
+
+3 dB over inn, gir 3*1/4 dB = 0,75 dB over ut (-19.25 dB)
 ```
 
-For en bestemt, fast Input Gain er det altså Threshold og Ratio som angir kompresjonsstyrke.
+For en bestemt, fast Input Gain er det Threshold og Ratio som angir kompresjonsstyrke.
 
 📌 **Attack**
 
@@ -197,7 +193,7 @@ Makeup Gain juster volumet opp igjen etter at kompressoren har dempet signalet. 
 
 👉 *Transienter er veldig korte, plutselige topper i lydsignalet (på noen få millisekunder), vanligvis helt i starten av en lyd, som f.eks. fra en gitar eller et piano*
 
-👉 *Flere kompressorer har en Auto Gain-checkbox som setter Makeup Gain automatisk. Mange skrur denne av for å høre virkningen av selve kompresjonen under arbeid.*
+👉 *Flere kompressorer har en Auto Gain-checkbox som setter Makeup Gain automatisk. Mange skrur denne av for å høre virkningen av selve kompresjonen under arbeidet.*
 
 ####  Innstillinger og bruk
 
@@ -221,7 +217,7 @@ hvor man for Threshold her prøver å si at man under avspilling
 
 👉 *Gain Reduction (GR) sier hvor mange dB signalet blir dempet av prosessoren*.
 
-👉 *Gain Reduction vises typisk sentralt i konsollen, ofte via et nål-basert meter*.
+👉 *Gain Reduction vises typisk sentralt i kompressorkonsollen, ofte via et nål-basert meter*
 
 Her er en mer kraftig kompresjon:
 
@@ -234,7 +230,7 @@ Release: 80 ms
 Makeup Gain: +3 til +5 dB
 ```
 
-- Input Gain gis et lett boost for mer signal over threshold
+- Input Gain gis her et lett boost for mer signal over Threshold
 - Threshold og ratio økes for mer kompresjon
 - Attack kortes for å temme transienter mer
 - Release slippes raskere for mer energi
@@ -243,7 +239,7 @@ Makeup Gain: +3 til +5 dB
 
 👉 *Når man jobber med kompresjon, er det lurt skru kompresjonen av og på for å høre virkningen tydeligere*.
 
-👉 *Det kan hende man må gå tilbake og justere innstillingene når man jobber med Limiter. Disse må samspille, men i utgangspunktet skrus Limiter av under innstillingsarbeidet*.
+👉 *Det hender man må gå tilbake og justere innstillingene når man senere jobber med Limiter. Disse må samspille, men i utgangspunktet skrus Limiter av under kompresjonseksperimenteringen*.
 
 ---
 
@@ -251,7 +247,7 @@ Makeup Gain: +3 til +5 dB
 
 En limiter kan beskrives som en intelligent og kontrollert måte å stoppe topper på før de klipper. I stedet for at signalet bare blir kuttet brutalt ved 0 dBFS (hard clipping), gjør limiteren dette:
 
-- ser transienten komme (lookahead)
+- ser transienten komme (Lookahead)
 
 - senker nivået veldig raskt
 
@@ -259,7 +255,7 @@ En limiter kan beskrives som en intelligent og kontrollert måte å stoppe toppe
 
 Resultatet er mye mindre hørbar forvrengning enn vanlig clipping.
 
-Det er ofte tegn på en god miks at Limiter jobber lite.
+Generelt er det tegn på en god miks at Limiter jobber lite.
 
 Typisk:
 
@@ -267,9 +263,7 @@ Typisk:
 Limiter gain reduction: 1–3 dB
 ```
 
-Da fanges de siste toppene, og gjennomsnittsvolumet løftes litt. 
-
-Hvis Limiter isteden stadig gjør:
+Da fanges de siste toppene, og gjennomsnittsvolumet løftes litt. Hvis Limiter isteden stadig gjør:
 
 ```python
 6–10 dB gain reduction
@@ -313,11 +307,11 @@ Gain øker volumet opp mot Output Ceiling. Hvis Limiter må redusere nivået for
 
 📌 **Output Ceiling**
 
-Output Ceiling et trygt maksimalt nivået for Stereo Out (ofte -0.3 dB) for å unngå clipping Dersom Limiter er siste plugin (som påvirker lyd), vil i prinsippet ikke clipping da skje, selv om det *vil kunne* skje ved overgangen fra digitalt til analogt signal.
+Output Ceiling et trygt maksimalt nivået for Stereo Out (ofte -0.3 dB) for å unngå clipping. Dersom Limiter er siste plugin (som påvirker lyd), vil i prinsippet ikke clipping da skje, selv om det *vil kunne* skje ved overgangen fra digitalt til analogt signal.
 
 📌 **Lookahead**
 
-Lookahead viser langt frem Limiter ser i signalet for å forhindre at transienter klipper. Verdier på 0–5 ms er vanlig. Mer lookahead kan gi mykere lyd, men med mindre punch/energi. Ved små verdier kan bli transienter klippet  ubehandlet.
+Lookahead sier hvor langt frem Limiter ser i signalet for å forhindre at transienter klipper. Verdier på 0–5 ms er vanlig. Mer lookahead kan gi mykere lyd, men med mindre punch/energi. Ved små verdier kan  transienter bli klippet ubehandlet.
 
 📌 **Adaptiv funksjon**
 
@@ -349,7 +343,7 @@ En veldig nyttig test for en miks man kan gjøre i Logic:
 
 ### Side Chain Compressing
  
-Det er også noe som heter Side Chain Compressing. Det kan brukes som en hjelp der to lyder konkurrerer om de samme frekvensene til samme tid. Kick og bass er et vanlig eksempel. Da kan man f.eks. sette opp at kompresjonen på bassen styres av kicken. Dette er veldig enkelt å få til i Logic Pro:
+Det er også noe som heter Side Chain Compressing. Det kan brukes som hjelp der to lyder konkurrerer om de samme frekvensene til samme tid. Kick og bass er et vanlig eksempel. Da kan man f.eks. sette opp at kompresjonen på bassen styres av kicken. Dette er veldig enkelt å få til i Logic Pro:
 
 - Legg kompressor på bassen
 - Øverst i plugin'en finnes Side Chain
@@ -360,15 +354,15 @@ Det er også noe som heter Side Chain Compressing. Det kan brukes som en hjelp d
 
 ## Miksing
 
-Vi skal så se på miksingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmiks.
+Vi skal nå se på miksingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmiks.
 
-Man setter Stereo Out fader til 0.0 dB, panorer alle tracks til senter og starter med alle spor-volum av.
+Man setter Stereo Out fader til 0.0 dB, panorerer alle tracks til senter og starter med alle spor-volum av.
 
 ---
 
 ### Spor-volume
 
-Volumet åpnes suksessivt iht. det følgende:
+Volumet åpnes suksessivt igjen i følgende rekkefølge:
 
 1. kick + bass
 2. trommer
@@ -378,23 +372,22 @@ Volumet åpnes suksessivt iht. det følgende:
 
 Med tanke på det viktige arbeidet med EQ senere, er det fint å å separert instrumenter mest mulig, f.eks. at basstrommer og hi-hats er på separate spor, at basstangenter i en pad er på annet spor en lyse toner osv.
 
-Ørene er beste hjelpemiddel, men la oss likevel gi noen tips.
+Ørene er beste hjelpemiddel, men la oss likevel gi noen generelle tips.
 
-👉 *Starte med kick-peak rundt -10 til -8 dB. Velg kick litt tydeligere enn bass*.
+- Starte med kick-peak rundt -10 til -8 dB. Velg kick litt tydeligere enn bass.
 
-👉 *Lytt gjerne på litt lavere volum*.
-
-👉 *Når miksen nesten er ferdig, dra alle faders og miks igjen veldig raskt*.
+- Lytt gjerne på litt lavere volum.
+- Når miksen nesten er ferdig, dra alle faders og miks igjen veldig raskt.
 
 Husk også å ende opp med tilstrekkelig headroom (maks -6dB på Stereo Out).
 
-De neste stegen etter dette er typisk:
+De neste stegen etter at volumene er satt, er typisk:
 
 - Panorering
 - EQ
 - Kompresjon på enkeltspor
-- Reverb, delay ect., typisk på busser
-- Buss-kompresjon
+- Reverb, delay ect. (typisk på busser)
+- Automatisering
 
 La oss ta disse i tur og orden.
 
@@ -437,7 +430,7 @@ Bass og lave frekvenser bør derimot være nær midten, fordi:
 - lave frekvenser fungerer dårlig i stereo
 - de da fort mister kraft
 
-Husk at panorering kan forenkle EQ-arbeidet.
+Husk at panorering også kan forenkle EQ-arbeidet.
 
 ---
 
@@ -501,7 +494,6 @@ lead +2 dB @ 2 kHz
 pad  -2 dB @ 2 kHz
 ```
 
-
 Dette kalles ofte complementary EQ.
 
 📌 **Litt “presence”**
@@ -524,272 +516,167 @@ High-shelf betegner det å løfte volumet til noen høye frekvenser (fra angitt 
 
 👉 *Hvis miksen føles uklar selv etter EQ, er problemet ofte for mange lag i mid-range (300–2000 Hz) – ikke dårlig EQ*.
 
+Har man susende pads og mange synther, kan man vurdere å dele opp akkorder mellom instrumentene (såkalt voicing) for å unngå frekvenskamp. Mange slike patcher er dessuten veldige "våte", i den forstand at de er satt opp til å låte flott alene, men mye delays, reverb, chorus og/eller andre effekter. Mye av dette er ikke nødvendig i tette partier, men viktigere er at de da bidrar til grums og frekvenskamp i mixen. Ofte kan parametre automatiseres i Logic, og hvis mulig bør man benytte tørrere lyd i tette partier.  
 
-Her har vi en liten oppdeling av frekvensspekteret som kan være nyttig.
+For nakne låter er ikke dette hovedutfordringen, men for mange amatørprosjekter er det tynne ut i lydbilde, uten å miste ønsket "trøkk" eller "punch", det kanskje mest krevende. Det å mute spor, prøve seg fram for å finne et optimalt breaking point – akkurat nok, men ikke for mye – bør prioriteres høyt.
 
+Her har vi en liten oppdeling og karakterisering av frekvensspekteret som kan være nyttig.
 
-1. **Ca. 200–500 Hz: Mud / grums**
+| Frekvenser | Karakteristikk      | Aksjon                                            |
+| ---------- | ------------------- | ------------------------------------------------- |
+| 20–40 Hz   | Sub bass /rumbling  | Spiser headrom for Limiter. Gjør high pass        |
+| 40–80 Hz   | Dyb bass / karakter | La gjerne én dominere (kick mer enn bass f.eks)   |
+| 80–150 Hz  | Øvre bass / varme   | Rydde plass med små kutt                          |
+| 150-200 Hz | Fylde /grums        | Forsiktig med EQ. Små kutt ved overvekt           |
+| 200–500 Hz | Mud / grums         | Små kutt for mer definisjon / klarhet             |
+| 500–900 Hz | Boxy / papp-lyd     | Små cut for mer klarhet                           |
+| 2–4 kHz    | Hardhet / skarphet  | Sensitivt. + for presence, - ved hardhet/tretthet |
+| 8–12 kHz   | Air / luft          | Viktig. + for åpenhet, - ved hiss /skarphet       |
 
-Dette området gir ofte:
-
-- uklar miks
-- lite definisjon
-- “tåke” i lydbildet
-
-Problemet oppstår når mange instrumenter har energi her samtidig:
-
-pads
-gitar
-piano
-synths
-vokal
-
-Typisk løsning: -2 til -4 dB cut på *enkelte* spor i dette området.
-
-2. **ca. 500–900 Hz: Boxy / papp-lyd**
-
-Dette området kan gi en litt:
-
-- hul
-- pappaktig
-- boksete lyd
-
-Vanlig i:
-
-- gitar
-- synth leads
-- trommeloops
-
-Små kutt her kan gjøre miksen renere og mer moderne.
-
-3. **Ca. 2–4 kHz: Hardhet / skarphet**
-
-Dette området er veldig sensitivt for øret. Det gir:
-
-- tydelighet
-- attack
-- presence
-
-Men for mye gir:
-
-- hard lyd
-- lyttetretthet
-
-Dette er ofte problemområdet i:
-
-- hi-hats
-- aggressive synths
-- gitar
-
-Løsning kan være -1 til -3 dB hvis noe føles skarpt.
-
-
-4. **8–12 kHz; Air / luft**
-
-Et ekstra viktig område. Her kan man ofte gjøre små boosts for å gi:
-
-- mer åpen lyd
-- mer detalj
-
-Men overdrivelse kan gi:
-
-- hiss
-- digital skarphet
+Med små kutt tenker man en demping på kanskje 1-3 eller 2-4 dB.
 
 --- 
 
-### Track- og buss-komprimering
+### Track-komprimering
 
-Praktisk EQ-prøveoppsett for flere patcher
-1. Sett opp grupper / buss
+Kompresjon på enkeltspor er et viktig steg etter EQ i en miks. Målet er ikke nødvendigvis å “høre” kompresjonen, men å kontrollere dynamikk og gjøre spor mer stabilt i miksen. Hvis man tydelig hører kompressoren jobbe i en vanlig miks, er det ofte litt for mye.
 
-Lag en buss for hver gruppe av patcher som spiller i samme frekvensområde (f.eks. pads, lead, bass).
-
-Send alle relevante patcher til bussen.
-
-Dette lar deg justere EQ og effekter samlet.
-
-2. High-pass og low-pass
-
-Start med High-pass for å fjerne unødvendig subbass på alle ikke-bass-lag: ca 80–150 Hz.
-
-Low-pass på pads/synt-lag som ikke trenger ekstremt høy frekvens: ca 8–12 kHz.
-
-3. Rydd i mid-range (200–2000 Hz)
-
-Spill gruppen sammen med andre patcher.
-
-Finn frekvenser som maskerer viktige elementer (bass, kick, lead).
-
-Bruk smale EQ-kutt (-2 til -4 dB) først – prøv å dempe overlapping uten å gjøre lyden unaturlig.
-
-Tips:
-
-Automatiser EQ hvis et instrument spiller gjennom forskjellige frekvensområder.
-
-Bruk solo vs mix lytting: slå solo av for å høre hvordan kutt påvirker helheten.
-
-4. Test med buss-effekter
-
-Legg på reverb/delay på bussen, ikke på individuelle patcher.
-
-Juster EQ igjen etter effekter for å holde plass til transienter og klarhet.
-
-5. Headroom
-
-Sørg for at Stereo Out fortsatt har -6 dB max peak før du går til mastering.
-
-Da ser du tydelig hvordan EQ-justeringene påvirker limiter og LUFS senere.
-
-6. Iterativ prosess
-
-Start med bare noen få patcher → legg til mer etter hvert.
-
-Hver gang du legger til et lag, sjekk:
-
-Hvordan det påvirker transienter
-
-Om det maskerer eksisterende instrumenter
-
-Om headroom holdes
-
-💡 Tips for å beholde naturlighet
-
-Små kutt (1–3 dB) virker ofte bedre enn store.
-
-Bruk shelving EQ for brede områder og parametrisk EQ for smale korrigeringer.
-
-Lytt på helheten, ikke bare solo-spor.
-
-
-
-
-Åpne File → Project Alternatives → New Alternative
-
-Gi alternativet et navn (f.eks. “Mix med split pad”)
+Det er særlig bass, kick og snare som er kandidater for komprimering her. Andre instrumenter med stor dynamikk kan også være aktuelle, som akustiske gitarer, funk guitars, synth leads etc. med kraftig anslag. FX-lyder fungerer gjerne best uten komprimering.
 
 ---
 
-## Trommer og loops
+### Reverbs, delays etc
 
-1. Den enkle løsningen: splitte loopen
+Delays, reverbs og andre effekter er der for å gi rom, dybde og plassering i miksen. Dette er et viktig steg for å få en miks til å føles proff, tredimensjonal og sammenhengende.
 
-I Logic kan du ofte gjøre dette:
+Reverb og delay brukes først og fremst til å plassere elementer i et virtuelt rom. Enkelt sagt har man sammenhengen:    
 
-Finn tromme-loopen du liker.
+```python
+front → lite reverb
+bak → mer reverb
+```
 
-Konverter til MIDI / Drummer / sampler (hvis mulig).
+Typisk har:
 
-Da kan du få separate spor for:
+- vokal → lite / kontrollert reverb
+- pads → mer reverb
+- FX → ofte mye reverb
 
-kick
+En vanlig feil er å bruke mange ulike reverbs. Bedre er det å lag 2–3 hovedrom på busser, f.eks:
 
-snare
+**Room:**
 
-hi-hat
+- kort rom
+- trommer / perk
 
-percussion
+**Plate;**
 
-Da får du:
+vokal / leads
 
-mye bedre mixing
+**Hall:**
 
-mulighet for variasjon
+- pads / atmosfære, FX
 
-mindre mekanisk følelse
+Dette gjør miksen mer sammenhengende. Bass har typisk ingen (eller svært lite) reverb.
 
-uten å programmere alt fra scratch.
+Delay kan ofte benyttes som alternativ til reverb på enkelte instrumenter. Delay kan gi romfølelse uten å gjøre miksen uklar.
 
-2. Den raske produsent-metoden
+Vanlige typer:
 
-Mange gjør dette:
+**slap delay**:
 
-Behold trommeloopen
-men legg oppå:
+- 80–120 ms
+- gir bredde og tykkelse
 
-egen kick
+**tempo-sync delay**:
 
-egen snare
+- 1/4 eller 1/8 note
+- vanlig på leads og vokal
 
-egen hihat
+Delay kan ofte være renere enn reverb.
 
-Da får du:
+#### EQ på reverb-busser:
 
-loop = groove
-egne trommer = punch
+Reverb bør nesten alltid EQ-behandles. Typisk her er:
 
-Dette er ekstremt vanlig i elektronisk musikk.
+- High-pass: ca 150–300 Hz for å unngå muddy low-end.
+- Low-pass:  ca 6–10 kHz for å gjøre rommet mer naturlig.
 
-3. Litt variasjon uten mye arbeid
+#### Pre-delay:
 
-For å unngå mekanisk følelse kan du gjøre små ting:
+Pre-delay bestemmer hvor lenge det går før reverb starter. Det gjør at lyden kan være tydelig før rommet kommer. Denne er viktig å tilpasse.
 
-mute hi-hat i noen takter
+La oss se på en mulig grovstruktur for et prosjekt som består av trommer, bass, pads, guitar, synth leads og diverse FX.
 
-legg inn ekstra kick før overgang
+📌 **Trommer**
 
-små fills før nytt parti
+- Room-bus: kort reverb på snare / toms / hi-hat.
+- Pre-delay: 10–30 ms for å holde punch.
+- Delay brukes sjelden på trommer, med mindre du vil ha et kreativt effektløft.
 
-automatiser litt volum på loopen
+📌 **Bass**
 
-Det tar ofte 2–3 minutter, men gir mye mer liv.
+- Ofte lite til ingen reverb – bass trenger klarhet.
+- Hvis du bruker reverb, high-pass EQ på bussen slik at sub-bassen ikke gjør rommet muddyt.
 
-4. En veldig nyttig Logic-teknikk
+📌 **Pads**
 
-Du kan også gjøre dette:
+- Plasser pads i Hall-bussen.
+- Delay (ofte tempo-synkronisert) kan gi bevegelse.
+- Reverb kan være litt lengre, men EQ for å unngå muddy low-end.
 
-Flex Time / Flex Groove
+📌. **Gitar / Synth leads**
 
-Dette lar deg:
+- Plate eller Room bus for vokal-lignende lead.
+- Tempo-synkronisert delay gir rytmisk fylde.
+- Pre-delay viktig for å beholde attack og tydelighet.
 
-endre timing litt
+📌 **Diverse FX**
 
-gjøre loopen mindre perfekt
+- Kan legges til i egen FX-bus med lang reverb og delay.
+- Ofte automasjon på send-nivå for dynamikk.
+- Bidrar til dybde og “luft” i miksen uten å drukne hovedinstrumentene.hovedinstrumentene.
 
-Resultat:
+Dette bildet forsøker å illustrere situasjonen:
 
-mindre robot
-mer groove
-5. En viktig miks-ting med loops
+![Mix Sheet](mix.sheet.png)
 
-Loops er ofte ferdig prosessert:
+---
 
-kompresjon
 
-EQ
+### Automatisering
 
-reverb
+Automatisering hører også med til miksingen. Dette gjøres normalt sent i miksingen, ettersom de ikke like enkelt som andre ting kan modifiseres. Det påvirker mixen, så den skjer ikke nødvendigvis helt til slutt, men ting må tilpasses dynamisk i en fram og tilbake-prosess.
 
-Det betyr at de kan være vanskelige å mikse.
+Ting å automatisere er
 
-Et veldig nyttig triks er:
+- volum på ulike spor for å å plass til ting i spesifikke partier (NB)
+- effektparametre på synths
+- romeffekter på busser og spor
+- paning for spesielle effekter
 
-high-pass rundt 40–80 Hz
 
-så loopen ikke konkurrerer med bass og kick.
+## Annet
 
-6. Den psykologiske sannheten
+### Miks med alternativer
 
-Nesten alle produsenter gjør dette:
+Logic Pro gjøre det lett å lage flere versjoner av et prosjekt, for alternative val for miksing og mastering (bl.a.)
 
-komponere med loops
-↓
-utsette trommer
-↓
-bli lei
-↓
-beholde loopen
+Åpne 
 
-Så du er i godt selskap. 😄
+```python
+File → Project Alternatives → New Alternative
+```
 
-Et lite tips spesielt for deg
+Gi alternativet et navn (f.eks. “Mix med split pad”) og forsøk. DEnne muligheten bør utnyttes aktivt.
 
-Siden du jobber mye med pads og synth-teksturer, kan du ofte slippe unna med:
+---
 
-én god trommeloop
+### Trommer og loops
 
-en ekstra kick
+Loops i LOgic, særlig tromme-loops er nyttige under komposisjon og i tidlig fase av prosjektet. Men Loops er ofte ferdig prosessert og tunge å mikse, foruten at naturlig variasjon blir vanskelig-
 
-en ekstra snare
+En løsning er å konverter loop til MIDI
+for å slippe å programmere alt fra scratch.
 
-og heller fokusere på sounddesign og miks.
+Når man ikke har nok tid eller energi til å få fram egne MIDI-baserte trommetrack, kan man automatiser litt volum på loopen, eller til og med endre timingen litt ved Flex Time / Flex Groove
