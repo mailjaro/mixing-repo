@@ -28,9 +28,9 @@ Det er også en del generelle tips i prosessen som er viktige:
 
 ## Mastering
 
-En vanlig problemstilling i mastering er at man ender opp med et produkt som er altfor lavt ift. profesjonell musikk. Man må skru opp lyden nesten mot maks for at volumet skal oppleves høyt. Selv om man har lagt seg så høyt som mulig uten clipping, blir sluttresultatet pulsete. (Clipping oppstår når lydsignalet blir høyere enn det digitale maksimumsnivået (0 dBFS). Da kuttes signaltoppene, lydbølger mister form og det oppstår forvrengning).
+En vanlig problemstilling i mastering er at man ender opp med et produkt som er altfor lavt ift. profesjonell musikk. Man må skru opp lyden nesten mot maks for at volumet skal oppleves høyt. Selv om man har lagt seg så høyt som mulig uten clipping, blir sluttresultatet pulsete. (Clipping oppstår når lydsignalet blir høyere enn det digitale maksimumsnivået (0 dBFS). Da kuttes signaltoppene, lydbølger mister form og det oppstår forvrengning.)
 
-Det man gjør i mixingen er å legge seg et godt stykke under clipping-nivået (master peaks rundt -6 dB er vanlig), for siden å stole på masteringen til å heve volumet.
+Det man gjør i mixingen er å legge seg et godt stykke under clipping-nivået (peaks rundt -6 dB på output-track er vanlig), for siden å stole på masteringen til å heve volumet.
 
 I mastering i Logic Pro opererer man på på output-track'et, dvs. på Stereo Out. Man har i tillegg et master track, som er fint å bruke til fade in/fade out, men som ellers kun er for kontroll av flere output-kilder. Dvs. pugins som brukes i mastering legges etter hverandre i Stereo Out.
 
@@ -49,13 +49,13 @@ Det fins også andre, som
 
 man kan fokusere mer på siden.
 
-Selv om det gjerne er lite EQ som gjøres i mastering, er likevel EQ naturlig det første "boksen" på Stereo Out. Den neste, Kompressoren, komprimerer lyden (dvs. den reduserer forskjellen mellom høye og lave nivåer (dynamikken), mens Limiter stopper peaks hardt over et bestemt nivå (som f.eks. -1 dB, men på en intelligent måte). Til slutt har vi Loudness Meter som ikke påvirker lyden, men som er en måler for opplevd lydstyrke. Med denne får man et objektiv, tallbasert mål for endelig lydstyrke som man kan styre etter.
+Selv om det gjerne er lite EQ som gjøres i mastering, er likevel EQ naturlig det første "boksen" på Stereo Out. Den neste, Kompressoren, komprimerer lyden (dvs. den reduserer forskjellen mellom høye og lave nivåer (dynamikken), mens Limiter stopper peaks hardt over et bestemt nivå (som f.eks. -1 dB), men på en intelligent måte). Til slutt har vi Loudness Meter som ikke påvirker lyden, men som er en måler for opplevd lydstyrke. Med denne får man et objektiv, tallbasert mål for endelig lydstyrke som man kan styre etter.
 
 ---
 
 ### Loudness Meter
 
-Loudness Meter kommer til slutt i kjeden, men må diskuteres først, siden den nevnes underveis i omtalen av de andre. Den gir altså et tall på lydstyrken, oppgitt i såkalte LUFS (Loudness Units relative to Full Scale 0 dBFS). Meteret viser typisk:
+Loudness Meter kommer til slutt i kjeden, men bør diskuteres først. Den gir altså et tall på lydstyrken, oppgitt i såkalte LUFS (Loudness Units relative to Full Scale, 0 dBFS). Meteret viser typisk:
 
 - Integrated LUFS → gjennomsnittlig loudness for hele låten
 - Short-term LUFS → loudness akkurat nå (målt over noen sekunder)
@@ -67,7 +67,6 @@ og tallene kan illustreres ved:
 -10 LUFS  → ganske høy
  -8 LUFS  → veldig høy
 ```
-![alt text](images/lufs.png)
 
 Integrated LUFS er den viktigste parameteren. Det forteller om låtens generelle lydnivå. Som referanse kan man nevne typisk lydnivå på en del vanlig musikk:
 
@@ -78,6 +77,8 @@ Integrated LUFS er den viktigste parameteren. Det forteller om låtens generelle
 | EDM         | **-8 til -10 LUFS** |
 
 (EDM er et samlebegrep for elektronisk klubb- og dansemusikk (som house, techno, dubstep osv.))
+
+![alt text](images/lufs.png)
 
 Integrated LUFS forteller selvsagt ikke alt. De fleste låter har en naturlig dynamikk mellom rolige og intense partier. Et for konstant nivå virker flatt og livløst.
 
@@ -94,7 +95,7 @@ Outro       -16 LUFS
 
 ### Channel EQ
 
-Mens EQ er fundamentalt viktig på enkeltspor for at det skal finne sin rette plass i mixen, er EQ på Stereo Out kun for små (typisk ±1–3 dB) avsluttende justeringer i frekvensbalansen. Store justeringer endre karakteren i lyden og bør unngås. Men man kan evt. finjustere litt på midrange, high-pass eller low-cut etc.
+Mens EQ er fundamentalt viktig på enkeltspor (for at det skal finne sin rette plass i mixen), er EQ på Stereo Out kun for små (typisk ±1–3 dB) avsluttende justeringer i frekvensbalansen. Store justeringer endre karakteren i lyden og bør unngås. Men man kan evt. finjustere litt på midrange, high-pass eller low-cut etc.
 
 ![alt text](images/eq.png)
 
@@ -187,7 +188,7 @@ Attack sier hvor raskt (i ms) kompressoren reagerer.
 - rask attack → temmer transients (kick, snare)
 - langsom attack → lar transienten slippe gjennom
 
-👉 *Transienter er veldig brå, kortvarig økninger i lydvolum, f.eks. fra trommer, guitar picks, vokalkonsonanter etc.*
+👉 *Transienter er veldig brå, kortvarig økninger i lydvolum, f.eks. fra trommer, guitar picks, vokal-konsonanter etc.*
 
 📌 **Release**
 
@@ -208,9 +209,9 @@ Mix blander tørr (original) lyd med komprimert lyd. Normalt, og særlig på Ste
 
 📌 **Distortion**
 
-Distortion legger til harmonisk forvrengning (saturation) på signalet, en form for fargelegging av lyden. Det er sjelden man vurderer det på Stereo Out, men er noe man *kan* eksperimentere med på enkeltspor. Innstillingene kan være off, soft, hard og clip. Soft kan gi varme og fylde. Hard kan gi mer "bite" på trommer, bass etc. Clip gir mer brutale klipp for mer loudness, men også ofte fordreining av lyd.
+Distortion legger til harmonisk forvrengning (saturation) på signalet, en form for fargelegging av lyden. Det er sjelden man vurderer det på Stereo Out, men det er noe man *kan* eksperimentere med på enkeltspor. Innstillingene kan være off, soft, hard og clip. Soft kan gi varme og fylde. Hard kan gi mer "bite" på trommer, bass etc. Clip gir mer brutale klipp for mer loudness, men også ofte fordreining av lyd.
 
-Bass kan ha godt av litt slik saturation om den forsvinner litt på små høyttalere.
+Bass kan ha godt av litt saturation om den forsvinner litt på små høyttalere.
 
 📌 **Makeup Gain**
 
@@ -373,14 +374,14 @@ En veldig nyttig test for en mix man kan gjøre i Logic:
 
 ## Mixing
 
-Vi skal nå se på mixingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmix. Man innleder med å sette Stereo Out fader til 0.0 dB, panorerer alle tracks til senter og starter med alle spor-volum på av.
+Vi skal nå se på mixingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmix. Man innleder med å sette Stereo Out-fader til 0.0 dB, panorerer alle tracks til senter og starter med alle spor-volum på av.
 
 ---
 
 
-### Spor-volume
+### Spor-volum
 
-Volumet åpnes suksessivt igjen i følgende rekkefølge:
+Volum på spor åpnes suksessivt igjen i følgende rekkefølge:
 
 1. kick + bass
 2. trommer
@@ -398,7 +399,7 @@ Med tanke på det viktige arbeidet med EQ senere, er det fint å separere instru
 
 Husk også å ende opp med tilstrekkelig headroom (maks -6dB på Stereo Out).
 
-De neste stegen etter at volumene er satt, er typisk:
+De neste stegene etter at volumene er satt, er typisk:
 
 - Panorering
 - EQ
@@ -463,7 +464,7 @@ To viktige regler:
 
 📌 **High-pass**
 
-High-pass fjerner lave frekvenser, men slipper gjennom høye. Dette er ofte det første man gjør. Mange spor inneholder nemlig unødvendig lavfrekvent energi som bare gjør mixen grumsete.
+High-pass fjerner lave frekvenser, men slipper gjennom høye. Dette er ofte det første man gjør. Mange spor inneholder unødvendig lavfrekvent energi som bare gjør mixen grumsete.
 
 | Instrument    | High-pass  |
 | ------------- | ---------- |
@@ -530,7 +531,7 @@ Men vær forsiktig – for mye gir hard lyd.
 
 High-shelf betegner det å løfte volumet på noen høye frekvenser (fra angitt verdi og oppover). Legg gjerne litt high shelf rundt 8–12 kHz. Dette kan gi litt luft og åpenhet i synths og pads, ofte bare +1 eller +2 dB
 
-👉 *Se på Logic sin Channel EQ . Den viser litt frekvensanalyse, hvor hvor energien ligger og hvor instrumenter overlapper*.
+👉 *Se på Logic sin Channel EQ . Den viser litt frekvensanalyse, hvor energien ligger og hvor instrumentene overlapper*.
 
 👉 *Ikke booste mange frekvenser. Dette gir mer rot og mindre headroom. Ofte er det bedre å kutte i andre spor*.
 
@@ -618,7 +619,7 @@ Man kan likevel eksperimentere med pre-delay for:
 - Ekstra klarhet på et instrument i miksen
 - Tilpassing av reverb til tempo eller rytme
 
-Delay kan ofte benyttes som alternativ til reverb på enkelte instrumenter. Delay kan gi romfølelse uten å gjøre mixen uklar. Delays er gjerne renere enn en reverb.
+Delay kan ofte benyttes som alternativ til reverb på enkelte instrumenter. Delay er gjerne renere enn reverb og kan gi romfølelse uten å gjøre mixen uklar.
 
 Vanlige typer delay er:
 
@@ -639,7 +640,7 @@ Reverb bør nesten alltid EQ-behandles. Typisk her er:
 - High-pass: ca 150–300 Hz for å unngå muddy low-end.
 - Low-pass:  ca 6–10 kHz for å gjøre rommet mer naturlig.
 
-La oss se på en mulig grovstruktur for dette for et prosjekt som består av trommer, bass, pads, guitar, synth leads og diverse FX.
+La oss se på en mulig grovstruktur for dette, for et prosjekt som består av trommer, bass, pads, guitar, synth leads og diverse FX.
 
 📌 **Trommer**
 
@@ -666,11 +667,11 @@ La oss se på en mulig grovstruktur for dette for et prosjekt som består av tro
 
 📌 **Diverse FX**
 
-- Kan legges til i egen FX-bus med lang reverb og delay.
+- Kan legges til i egen FX-buss med lang reverb og delay.
 - Ofte automasjon på send-nivå for dynamikk.
 - Bidrar til dybde og “luft” i mixen uten å drukne hovedinstrumentene.
 
-Dette bildet forsøker å illustrere situasjonen:
+Dette bildet forsøker å illustrere mixingen totalt sett:
 
 ![Mix Sheet](images/mix.sheet.png)
 
@@ -679,11 +680,11 @@ Dette bildet forsøker å illustrere situasjonen:
 
 ### Automatisering
 
-Automatisering hører også med til mixingen. Dette gjøres normalt sent, ettersom disse ikke er like enkle som andre ting kan modifiseres. Det påvirker mixen, så den skjer ikke nødvendigvis helt til slutt, men alt må tilpasses dynamisk i en fram og tilbake-prosess.
+Automatisering hører også med til mixingen. Dette gjøres normalt sent, ettersom disse ikke enkle å modifisere. Det påvirker mixen, så den skjer ikke nødvendigvis helt til slutt, men alt må tilpasses dynamisk i en fram og tilbake-prosess.
 
 Ting å automatisere er
 
-- volum på ulike spor for å få plass til ting i spesifikke partier (NB)
+- volum på ulike spor for å få bedre plass til ting i spesifikke partier (NB)
 - effektparametre på synths
 - romeffekter på busser og spor
 - paning for spesielle effekter
@@ -693,7 +694,7 @@ Ting å automatisere er
 
 ### mix med alternativer
 
-Logic Pro gjøre det lett å lage flere versjoner av et prosjekt. For begynne på et alternativ. åpne: 
+Logic Pro gjøre det lett å lage flere versjoner av et prosjekt. For begynne på et alternativ, åpne: 
 
 ```python
 File → Project Alternatives → New Alternative
