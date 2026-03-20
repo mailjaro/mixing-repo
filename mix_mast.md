@@ -32,7 +32,7 @@ En vanlig problemstilling i mastering er at man ender opp med et produkt som er 
 
 Det man gjør i mixingen er å legge seg et godt stykke under clipping-nivået (peaks rundt -6 dB på output-track er vanlig), for siden å stole på masteringen til å heve volumet.
 
-I mastering i Logic Pro opererer man på på output-track'et, dvs. på Stereo Out. Man har i tillegg et master track, som er fint å bruke til fade in/fade out, men som ellers kun er for kontroll av flere output-kilder. Dvs. pugins som brukes i mastering legges etter hverandre i Stereo Out.
+I mastering i Logic Pro opererer man på output-track'et, dvs. på Stereo Out. Man har i tillegg et master track, som er fint å bruke til fade in/fade out, men som ellers kun er for kontroll av flere output-kilder. Dvs. pugins som brukes i mastering legges etter hverandre i Stereo Out.
 
 Det er flere plugins som kan brukes, men det helt grunnleggende (det minimale vi skal fokusere på) er:
 
@@ -55,7 +55,7 @@ Selv om det gjerne er lite EQ som gjøres i mastering, er likevel EQ naturlig de
 
 ### Loudness Meter
 
-Loudness Meter kommer til slutt i kjeden, men bør diskuteres først. Den gir altså et tall på lydstyrken, oppgitt i såkalte LUFS (Loudness Units relative to Full Scale, 0 dBFS). Meteret viser typisk:
+Loudness Meter kommer til slutt i kjeden, men bør diskuteres først siden et loudness-mål kreves i mastering. Meteret gir altså et tall på lydstyrken, oppgitt i såkalte LUFS (Loudness Units relative to Full Scale, 0 dBFS). Meteret viser typisk:
 
 - Integrated LUFS → gjennomsnittlig loudness for hele låten
 - Short-term LUFS → loudness akkurat nå (målt over noen sekunder)
@@ -68,7 +68,7 @@ og tallene kan illustreres ved:
  -8 LUFS  → veldig høy
 ```
 
-Integrated LUFS er den viktigste parameteren. Det forteller om låtens generelle lydnivå. Som referanse kan man nevne typisk lydnivå på en del vanlig musikk:
+Integrated LUFS er viktigste her. Det forteller om låtens generelle lydnivå. Som referanse kan man nevne typisk lydnivå på en del vanlig musikk:
 
 | Plattform   | Loudness            |
 | ----------- | ------------------- |
@@ -258,11 +258,9 @@ Makeup Gain: +3 til +5 dB
 - Release slippes raskere for mer energi
 - Makeup Gain kompenserer mer for det tapte
 
-
 👉 *Når man jobber med kompresjon, er det lurt skru kompresjonen av og på for å høre virkningen tydeligere*.
 
 👉 *Det hender man må gå tilbake og justere innstillingene når man senere jobber med Limiter. Disse må samspille, men i utgangspunktet skrus Limiter av under kompresjonseksperimenteringen*.
-
 
 ### Side Chain Compressing
 
@@ -276,7 +274,7 @@ Det er også noe som heter Side Chain Compressing. Det kan brukes som hjelp der 
 
 ### Limiter
 
-En limiter kan beskrives som en intelligent og kontrollert måte å stoppe topper på før de klipper. I stedet for at signalet bare blir kuttet brutalt ved 0 dBFS (hard clipping), gjør limiteren dette:
+En limiter kan beskrives som en intelligent og kontrollert måte å stoppe topper på før de klipper. I stedet for at signalet bare blir kuttet brutalt ved 0 dBFS (hard clipping), gjør Limiter dette:
 
 - ser transienten komme (Lookahead)
 - senker nivået veldig raskt
@@ -292,7 +290,9 @@ Typisk:
 Limiter gain reduction: 1–3 dB
 ```
 
-Da fanges de siste toppene, og gjennomsnittsvolumet løftes litt. Hvis Limiter isteden stadig gjør:
+Med dette menes at typisk verdi vil være dette når Limiter blinker/jobber. Man tåler at et og annet blink er høyre, f.eks. 5-6 dB, bare hovedtyngden er lavere. Da fanges de siste toppene, og gjennomsnittsvolumet løftes litt.
+
+Hvis Limiter isteden stadig gjør:
 
 ```python
 6–10 dB gain reduction
@@ -324,9 +324,11 @@ Andre alternativer er
 
 📌 **Gain**
 
-Gain øker volumet opp mot Output Ceiling. Hvis Limiter må redusere nivået for å holde signalet under grensen, vises dette som Gain Reduction. Når man skrur opp Gain, bør man følge med på Gain Reduction, gjerne vist som en vertikal bar eller en nål.
+Gain øker volumet opp mot Output Ceiling. Hvis Limiter må redusere nivået for å holde signalet under grensen, vises dette som Gain Reduction. Når man skrur opp Gain, bør man altså følge med på Gain Reduction, gjerne vist som en vertikal bar eller en nål.
 
 ![alt text](images/limiter.png)
+
+I figuren ser vi Gain Reduction som den lille blå bar'en i midten av venstre halvdel. Den blinker tydeligvis her med en verdi på ca. 3.0 dB, mens maks-verdien så langt har vært på 6.2 dB.
 
 Økning av Gain:
 
@@ -374,10 +376,9 @@ En veldig nyttig test for en mix man kan gjøre i Logic:
 
 ## Mixing
 
-Vi skal nå se på mixingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmix. Man innleder med å sette Stereo Out-fader til 0.0 dB, panorerer alle tracks til senter og starter med alle spor-volum på av.
+Vi skal nå se på mixingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmix. Man innleder med å sette Stereo Out-fader til 0.0 dB, panorerer alle tracks til senter og starter med alle spor-volum på av. (Enkelte effekter og plugins forutsetter at Stereo Out står på 0.0 dB.)
 
 ---
-
 
 ### Spor-volum
 
@@ -537,9 +538,9 @@ High-shelf betegner det å løfte volumet på noen høye frekvenser (fra angitt 
 
 👉 *Hvis mixen føles uklar selv etter EQ, er problemet ofte for mange lag i mid-range (300–2000 Hz) – ikke dårlig EQ*.
 
-Har man susende pads og mange synther, kan man vurdere å dele opp akkorder mellom instrumentene (såkalt voicing) for lettere å unngå frekvenskamp. Mange slike patcher er dessuten veldige "våte", i den forstand at de er satt opp til å låte flott alene, med mye delays, reverb, chorus og/eller andre effekter. Mye av dette er ikke nødvendig i tette partier, men viktigere er at effektene bidrar til grums og frekvenskamp i mixen. Ofte kan parametre automatiseres i Logic, og hvis mulig bør man utnytte dette for tørrere lyd i tette partier.  
+Har man susende pads og mange synth'er, kan man vurdere å dele opp akkorder mellom instrumentene (såkalt voicing) for lettere å unngå frekvenskamp. Mange slike patcher er dessuten veldige "våte", i den forstand at de er satt opp til å låte flott alene, med mye delays, reverb, chorus og/eller andre effekter. Mye av dette er ikke nødvendig i tette partier, men viktigere er at effektene bidrar til grums og frekvenskamp i mixen. Ofte kan parametre automatiseres i Logic, og hvis mulig bør man utnytte dette for tørrere lyd i tette partier.  
 
-For nakne låter er ikke det nevnte hovedutfordringen, men for mange amatørprosjekter er det tynne ut i lydbilde, uten å miste ønsket "trøkk" eller "punch", det kanskje mest krevende. Det å mute spor, prøve seg fram for å finne et optimalt breaking point – akkurat nok, men ikke for mye – bør prioriteres høyt.
+For nakne låter er ikke det nevnte hovedutfordringen, men for mange amatørprosjekter er det tynne ut i lydbilde, uten å miste ønsket "trøkk" eller "punch", det kanskje mest krevende. Det å mute spor, prøve seg fram for å finne et optimalt breaking point – akkurat nok, men ikke for mye – bør prioriteres.
 
 Her har vi en liten oppdeling og karakterisering av frekvensspekteret som kan være nyttig.
 
@@ -619,7 +620,7 @@ Man kan likevel eksperimentere med pre-delay for:
 - Ekstra klarhet på et instrument i miksen
 - Tilpassing av reverb til tempo eller rytme
 
-Delay kan ofte benyttes som alternativ til reverb på enkelte instrumenter. Delay er gjerne renere enn reverb og kan gi romfølelse uten å gjøre mixen uklar.
+Delay kan ofte benyttes som alternativ til reverb på enkelte instrumenter. Delay er gjerne renere og kan gi romfølelse uten å gjøre mixen uklar.
 
 Vanlige typer delay er:
 
@@ -677,10 +678,9 @@ Dette bildet forsøker å illustrere mixingen totalt sett:
 
 ---
 
-
 ### Automatisering
 
-Automatisering hører også med til mixingen. Dette gjøres normalt sent, ettersom disse ikke enkle å modifisere. Det påvirker mixen, så den skjer ikke nødvendigvis helt til slutt, men alt må tilpasses dynamisk i en fram og tilbake-prosess.
+Automatisering hører også med til mixingen. Dette gjøres normalt sent, ettersom disse ikke er enkle å modifisere. Det påvirker mixen, så den skjer ikke nødvendigvis helt til slutt, men alt må tilpasses dynamisk i en fram og tilbake-prosess.
 
 Ting å automatisere er
 
