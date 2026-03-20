@@ -689,12 +689,116 @@ Ting å automatisere er
 - romeffekter på busser og spor
 - paning for spesielle effekter
 
-
 ## Annet
+
+Vi har samlet andre ting man kan utnytte arbeidet her. Det er for det første de neste master-plugin'ene det er naturlig å se på når de grunnleggende elementene beherskes. Dessuten har vi samlet diverse råd i tips i dette kapittelet.
+
+Det er ikke slik at flere master-plugins gir bedre lyd. Det vi har nevnt er det viktige. Men det er alltid nyttig å eksperimentere, og det som kan redde en låt kan ødelegge en annen.
+
+### Exciter
+
+Det anbefales gjerne å bli trygg på grunnleggende mastering før man forsøker seg med flere master-plugins. Den første man kan se på etter dette, kan være Exciter. Den legger til harmoniske overtoner (ofte i high-end) for 
+
+- mer klarhet
+- mer “air”
+- mer tilstedeværelse
+
+Man har også Phat FX og Overdrive som gjør noe likende (og vi har nevnt overdrive-parameteren på kompressoren vår). Exciter er gjerne varmere, mer subtil og forbundet med mindre risiko.
+
+![Exciter](images/exciter.png)
+
+Når den fungerer, gir den mer klarhet, mer definisjon og åpning i toppen. Hvis man isteden hører skarphet, spisshet (sibliance) og slitsom lyd, bør den dempes eller til og med fjernes. Som man sier:
+
+```python
+- du skal savne den når du slår den av
+- ikke høre det tydelig når den er på
+```
+
+Exciter legges før Limiter i kjeden:
+
+```python
+EQ → Kompressor → Exciter → Limiter → Loudness Meter
+```
+
+Den enkleste Exciter-plugin'en i Logic har tre paramtere:
+
+#### Frekvens (Hz)
+
+Denne bestemmer hvor i frekvensområdet Exciter jobber.
+
+Typiske valg:
+
+- 3–5 kHz → presence (kan bli litt aggressivt)
+- 5–8 kHz → klarhet (veldig vanlig)
+- 8–12 kHz → “air” / topp
+
+#### Harmonics (%)
+
+Denne bestemmer hvor mye overtoner som legges til (styrken på effekten).
+
+Typiske verdier:
+
+- 0–10 % → veldig subtil (bra for mastering)
+- 10–20 % → tydelig effekt
+- over 20 % → ofte for mye på master
+
+5-10 % kan være greit å starte med.
+
+#### Dry Signal (On/Off)
+
+Denne angir om originalsignalet blandes inn, hvilket det er naturlig å gjøre det (ON). OFF kan fort gi kunstig lyd.
+
+Det er også satt opp to ulike typer harmonisk karakter: Color 1 og Color 2 (den ene gjerne noe midlere, den andre noe mer aggressiv).
+
+Oppsummert, en trygg Exciter-start kan være:
+
+```python
+Frekvens: 7000 Hz
+Harmonics: 5–8 %
+Dry: ON
+Color: test begge
+```
+
+### Stereo-plugins
+
+Neste master-plugin å vurdere, kan være en av flere mulige stereo-plugins, f.eks. Stereo Spread og Direction Mixer. Sistnevnte kan være et trygt valg i starten.
+
+Slike plasserer etter evt. Exciter og før Limiter:
+
+```python
+EQ → Kompressor → Exciter → Stereo → Limiter
+```
+
+Når det fungerer vil miksen åpner seg, gi mer romfølelse og mindre klumping i midten. Omvendt kan man miste fokus i midten og høres kunstig bredt ut når man overdriver.
+
+Her ser vi et bilde av den og dens parametre:
+
+![alt text](images/stereo.png)
+
+
+#### Spread / Width
+
+Denne sier hvor bred lyden er.
+
+- 1.0 = normal
+- 1.0 = bredere
+- <1.0 = smalere
+
+Start gjerne veldig forsiktig, med verdier som 1.0-1.2.
+
+#### Direction (%)
+
+Dette flytter lyden mot venstre eller høyre, og brukes nesten aldri i mastering. Velg 0% (midtstilt).
+
+#### Input (LR / MS)
+
+LR står for Left-Right. Her behandles venstre og høyre kanal direkte og er et naturlig startsted. MS står for Mid-Side og splitter først signalet i det som er i midten (som leads, bass og kick) og side. Dette gjør det mulig å påvirke bredde uten å ødelegge midten. Split ON/OFF er relatert til dette, Med split off påvirkes signalet samlet, og plugin'en forsøker å gjøre hele signalet bredere. Ved split on får man to uavhengige justeringer (mid/side).
+
+LR forsterker forskjellen mellom venstre og høyre, og MS justerer forholdet mellom mid (svakere) og side (sterkere). I en typisk mix vil mye av high-end og rom ligger i sidene, mens midten (kick, bass) er mer low-end. Med plugin'en vil det høres ut som det blir mer “luft” og detaljer. Det tilføres ikke f.eks. nye overtoner eller den slags, det eksisterende blir bare tydeligere.
 
 ### mix med alternativer
 
-Logic Pro gjøre det lett å lage flere versjoner av et prosjekt. For begynne på et alternativ, åpne: 
+Logic Pro gjøre det lett å lage flere versjoner av et prosjekt. For å begynne på et alternativ, åpne: 
 
 ```python
 File → Project Alternatives → New Alternative
