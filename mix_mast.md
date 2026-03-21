@@ -93,7 +93,7 @@ Outro       -16 LUFS
 
 ---
 
-### Channel EQ
+### EQ
 
 Mens EQ er fundamentalt viktig på enkeltspor (for at det skal finne sin rette plass i mixen), er EQ på Stereo Out kun for små (typisk ±1–3 dB) avsluttende justeringer i frekvensbalansen. Store justeringer endre karakteren i lyden og bør unngås. Men man kan evt. finjustere litt på midrange, high-pass eller low-cut etc.
 
@@ -691,13 +691,11 @@ Ting å automatisere er
 
 ## Annet
 
-Vi har samlet andre ting man kan utnytte arbeidet her. Det er for det første de neste master-plugin'ene det er naturlig å se på når de grunnleggende elementene beherskes. Dessuten har vi samlet diverse råd i tips i dette kapittelet.
-
-Det er ikke slik at flere master-plugins gir bedre lyd. Det vi har nevnt er det viktige. Men det er alltid nyttig å eksperimentere, og det som kan redde en låt kan ødelegge en annen.
+Vi har samlet diverse råd og annet i dette kapitelet. I tillegg er det flere master-plugins man kan vurdere å se på når de grunnleggende elementene beherskes. Det er ikke slik at flere master-plugins gir bedre lyd. Det vi har nevnt er det viktige. Men det er alltid nyttig å eksperimentere, og det som kan redde en låt kan ødelegge en annen.
 
 ### Exciter
 
-Det anbefales gjerne å bli trygg på grunnleggende mastering før man forsøker seg med flere master-plugins. Den første man kan se på etter dette, kan være Exciter. Den legger til harmoniske overtoner (ofte i high-end) for 
+En aktull plugin er Exciter. Den legger til harmoniske overtoner (ofte i high-end) for 
 
 - mer klarhet
 - mer “air”
@@ -734,7 +732,7 @@ Typiske valg:
 
 #### Harmonics (%)
 
-Denne bestemmer hvor mye overtoner som legges til (styrken på effekten).
+Denne bestemmer hvor mye overtoner som legges til (dvs. styrken på effekten).
 
 Typiske verdier:
 
@@ -746,9 +744,9 @@ Typiske verdier:
 
 #### Dry Signal (On/Off)
 
-Denne angir om originalsignalet blandes inn, hvilket det er naturlig å gjøre det (ON). OFF kan fort gi kunstig lyd.
+Denne angir om originalsignalet blandes inn, hvilket det er naturlig å gjøre (ON). OFF kan fort gi kunstig lyd.
 
-Det er også satt opp to ulike typer harmonisk karakter: Color 1 og Color 2 (den ene gjerne noe midlere, den andre noe mer aggressiv).
+Det er også satt opp to ulike typer harmonisk karakterer: Color 1 og Color 2 (den ene gjerne noe midlere, den andre noe mer aggressiv).
 
 Oppsummert, en trygg Exciter-start kan være:
 
@@ -761,15 +759,15 @@ Color: test begge
 
 ### Stereo-plugins
 
-Neste master-plugin å vurdere, kan være en av flere mulige stereo-plugins, f.eks. Stereo Spread og Direction Mixer. Sistnevnte kan være et trygt valg i starten.
+Neste master-plugin man kan vurdere er en av flere mulige stereo-plugins, f.eks. Stereo Spread og Direction Mixer. Sistnevnte kan være et trygt valg i starten.
 
-Slike plasserer etter evt. Exciter og før Limiter:
+Den plasseres etter evt. Exciter og før Limiter:
 
 ```python
 EQ → Kompressor → Exciter → Stereo → Limiter
 ```
 
-Når det fungerer vil miksen åpner seg, gi mer romfølelse og mindre klumping i midten. Omvendt kan man miste fokus i midten og høres kunstig bredt ut når man overdriver.
+Når den fungerer vil miksen åpner seg, gi mer romfølelse og mindre klumping i midten. Omvendt kan man miste fokus i midten og mixen høres kunstig bred ut når man overdriver.
 
 Her ser vi et bilde av den og dens parametre:
 
@@ -792,11 +790,15 @@ Dette flytter lyden mot venstre eller høyre, og brukes nesten aldri i mastering
 
 #### Input (LR / MS)
 
-LR står for Left-Right. Her behandles venstre og høyre kanal direkte og er et naturlig startsted. MS står for Mid-Side og splitter først signalet i det som er i midten (som leads, bass og kick) og side. Dette gjør det mulig å påvirke bredde uten å ødelegge midten. Split ON/OFF er relatert til dette, Med split off påvirkes signalet samlet, og plugin'en forsøker å gjøre hele signalet bredere. Ved split on får man to uavhengige justeringer (mid/side).
+LR står for Left-Right. Her behandles venstre og høyre kanal direkte og er et naturlig startsted. MS står for Mid-Side og splitter først signalet i det som er i midten (som leads, bass og kick) og side (pads og annet). Dette gjør det mulig å påvirke bredde uten å ødelegge midten. Split ON/OFF er relatert til dette, Med split OFF påvirkes signalet samlet, og plugin'en forsøker å gjøre hele signalet bredere. Ved split ON får man to uavhengige justeringer (mid/side).
 
-LR forsterker forskjellen mellom venstre og høyre, og MS justerer forholdet mellom mid (svakere) og side (sterkere). I en typisk mix vil mye av high-end og rom ligger i sidene, mens midten (kick, bass) er mer low-end. Med plugin'en vil det høres ut som det blir mer “luft” og detaljer. Det tilføres ikke f.eks. nye overtoner eller den slags, det eksisterende blir bare tydeligere.
+LR forsterker forskjellen mellom venstre og høyre, og MS justerer forholdet mellom mid (svakere) og side (sterkere). I en typisk mix vil mye av high-end og rom ligger i sidene, mens midten er mer low-end. Med plugin'en kan det føre til mer “luft” og detaljer. Merk at det ikke tilføres f.eks. nye overtoner eller den slags. Det eksisterende blir bare tydeligere.
 
-### mix med alternativer
+Igjen kan man prøve å skru den av og på, og bare inkludere den om man savner virkningen.
+
+Dersom avspilling i mono er relevant, bør man også kontrollere plugin'ens virkning under mono. I mange tilfeller grøter den til mono-lyden.
+
+### Mix med alternativer
 
 Logic Pro gjøre det lett å lage flere versjoner av et prosjekt. For å begynne på et alternativ, åpne: 
 
