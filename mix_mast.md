@@ -62,7 +62,7 @@ Loudness Meter kommer til slutt i kjeden, men bør diskuteres først siden et lo
 
 og tallene kan illustreres ved:
 
-```python
+```default
 -14 LUFS  → moderat loudness
 -10 LUFS  → ganske høy
  -8 LUFS  → veldig høy
@@ -84,7 +84,7 @@ Integrated LUFS forteller selvsagt ikke alt. De fleste låter har en naturlig dy
 
 Her er en mer balansert illustrasjon:
 
-```python
+```default
 Intro       -18 LUFS
 Vers        -15 LUFS
 Refreng     -11 LUFS
@@ -154,14 +154,14 @@ Ratio bestemmer hvor hardt signalet presses ned over Threshold.
 
 Mer konkret
 
-```python
+```default
 3:1:   3 dB over Threshold → blir til 1 dB over Threshold ut
 4:1:   4 dB over Threshold → blir til 1 dB over Threshold ut
 ```
 
 Eksempler:
 
-```python
+```default
 Ratio:      3:1
 Threshold: -20 dB
 Input:     -17 dB (3 over)
@@ -169,7 +169,7 @@ Input:     -17 dB (3 over)
 3 dB over inn, gir 1 dB over ut (-19 dB)
 ```
 
-```python
+```default
 Ratio:      4:1
 Threshold: -20 dB
 Input:     -17 dB (3 over)
@@ -223,7 +223,7 @@ Makeup Gain juster volumet opp igjen etter at kompressoren har dempet signalet. 
 
 Her er en relativ mild kompresjon:
 
-```python
+```default
 Input Gain: 0 dB
 Threshold: juster til 1–3 dB gain reduction
 Ratio: 2:1
@@ -243,7 +243,7 @@ hvor man for Threshold her prøver å si at man under avspilling
 
 Her er en mer kraftig kompresjon:
 
-```python
+```default
 Input Gain: 0 til +2 dB
 Threshold: juster til 3–6 dB gain reduction
 Ratio: 4:1
@@ -286,7 +286,7 @@ Generelt er det tegn på en god mix at Limiter jobber lite.
 
 Typisk:
 
-```python
+```default
 Limiter gain reduction: 1–3 dB
 ```
 
@@ -294,7 +294,7 @@ Med dette menes at typisk verdi vil være dette når Limiter blinker/jobber. Man
 
 Hvis Limiter isteden stadig gjør:
 
-```python
+```default
 6–10 dB gain reduction
 ```
 
@@ -332,7 +332,7 @@ I figuren ser vi Gain Reduction som den lille blå bar'en i midten av venstre ha
 
 Økning av Gain:
 
-```python
+```default
 → signalet prøver å gå over ceiling
 → Limiter presser det ned igjen
 → Gain Reduction-måleren viser hvor mye
@@ -354,7 +354,7 @@ Adaptive Limiter justerer seg selv dynamisk for å hindre pumping og sikre jevn 
 
 Som sagt karakteriserer Gain Reduction her hvor mye Limiter jobber:
 
-```python
+```default
 1–3 dB  → lett limiting (ofte ideelt)
 3–5 dB  → moderat
 6 dB +  → hard limiting
@@ -366,7 +366,7 @@ En veldig nyttig test for en mix man kan gjøre i Logic:
 - Øk Gain til ca +6 dB
 - Se på Gain Reduction.
 
-```python
+```default
 1–3 dB → veldig bra mix
 3–6 dB → normalt
 8–10 dB → mixen er krevende
@@ -511,7 +511,7 @@ Eksempel:
 Hvis lead synth er viktig rundt 2 kHz, kan du kutte litt der i pads.
 
 
-```python
+```default
 lead +2 dB at 2 kHz
 pad  -2 dB at 2 kHz
 ```
@@ -573,7 +573,7 @@ Delays, reverbs og andre effekter er der for å gi rom, dybde og plassering i mi
 
 Reverb (og tidels delay) brukes først og fremst til å plassere elementer i et virtuelt rom. Enkelt sagt har man sammenhengen:    
 
-```python
+```default
 front → lite reverb
 bak → mer reverb
 ```
@@ -707,14 +707,14 @@ Man har også Phat FX og Overdrive som gjør noe likende (og vi har nevnt overdr
 
 Når den fungerer, gir den mer klarhet, mer definisjon og åpning i toppen. Hvis man isteden hører skarphet, spisshet (sibliance) og slitsom lyd, bør den dempes eller til og med fjernes. Som man sier:
 
-```python
+```default
 - du skal savne den når du slår den av
 - ikke høre det tydelig når den er på
 ```
 
 Exciter legges før Limiter i kjeden:
 
-```python
+```default
 EQ → Kompressor → Exciter → Limiter → Loudness Meter
 ```
 
@@ -750,7 +750,7 @@ Det er også satt opp to ulike typer harmonisk karakterer: Color 1 og Color 2 (d
 
 Oppsummert, en trygg Exciter-start kan være:
 
-```python
+```default
 Frekvens: 7000 Hz
 Harmonics: 5–8 %
 Dry: ON
@@ -763,7 +763,7 @@ Neste master-plugin man kan vurdere er en av flere mulige stereo-plugins, f.eks.
 
 Den plasseres etter evt. Exciter og før Limiter:
 
-```python
+```default
 EQ → Kompressor → Exciter → Stereo → Limiter
 ```
 
@@ -802,7 +802,7 @@ Dersom avspilling i mono er relevant, bør man også kontrollere plugin'ens virk
 
 Logic Pro gjøre det lett å lage flere versjoner av et prosjekt. For å begynne på et alternativ, åpne: 
 
-```python
+```default
 File → Project Alternatives → New Alternative
 ```
 
