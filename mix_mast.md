@@ -1,6 +1,6 @@
 # 🎶 mixing og mastering
 
-![alt text](images/mix.png)
+<img src="images/mix.png" class="centerpict">
 
 Dette hefter gir en innføring i mixing og mastering. Den retter seg mot nybegynner som jobber hobbypreget og som trenger hjelp til å komme i gang, lære seg noe om teknikker, terminologi og bestandeler. Jeg er ingen ekspert. Der erfarne folk har annet å si, lytt til dem. Men dette heftet kan være til hjelp som et utgangspunkt.
 
@@ -78,7 +78,7 @@ Integrated LUFS er viktigste her. Det forteller om låtens generelle lydnivå. S
 
 (EDM er et samlebegrep for elektronisk klubb- og dansemusikk (som house, techno, dubstep osv.))
 
-![alt text](images/lufs.png)
+<img src="images/lufs.png" class="leftpict">
 
 Integrated LUFS forteller selvsagt ikke alt. De fleste låter har en naturlig dynamikk mellom rolige og intense partier. Et for konstant nivå virker flatt og livløst.
 
@@ -97,7 +97,7 @@ Outro       -16 LUFS
 
 Mens EQ er fundamentalt viktig på enkeltspor (for at det skal finne sin rette plass i mixen), er EQ på Stereo Out kun for små (typisk ±1–3 dB) avsluttende justeringer i frekvensbalansen. Store justeringer endre karakteren i lyden og bør unngås. Men man kan evt. finjustere litt på midrange, high-pass eller low-cut etc.
 
-![alt text](images/eq.png)
+<img src="images/eq.png" class="leftpict">
 
 Her ser vi bare en illustrasjon av hvordan hovedvinduet ser ut.
 
@@ -113,7 +113,7 @@ Det anbefales å begynne med **Platinum Digital**. Den er
 - nøytral
 - lett å forstå
 
-![alt text](images/compress.png)
+<img src="images/compress.png" class="leftpict">
 
 Senere kan man eksperimentere med:
 
@@ -326,7 +326,7 @@ Andre alternativer er
 
 Gain øker volumet opp mot Output Ceiling. Hvis Limiter må redusere nivået for å holde signalet under grensen, vises dette som Gain Reduction. Når man skrur opp Gain, bør man altså følge med på Gain Reduction, gjerne vist som en vertikal bar eller en nål.
 
-![alt text](images/limiter.png)
+<img src="images/limiter.png" class="leftpict">
 
 I figuren ser vi Gain Reduction som den lille blå bar'en i midten av venstre halvdel. Den blinker tydeligvis her med en verdi på ca. 3.0 dB, mens maks-verdien så langt har vært på 6.2 dB.
 
@@ -674,7 +674,7 @@ La oss se på en mulig grovstruktur for dette, for et prosjekt som består av tr
 
 Dette bildet forsøker å illustrere mixingen totalt sett:
 
-![Mix Sheet](images/mix.sheet.png)
+<img src="images/mix.sheet.png" class="leftpict">
 
 ---
 
@@ -703,7 +703,7 @@ En aktull plugin er Exciter. Den legger til harmoniske overtoner (ofte i high-en
 
 Man har også Phat FX og Overdrive som gjør noe likende (og vi har nevnt overdrive-parameteren på kompressoren vår). Exciter er gjerne varmere, mer subtil og forbundet med mindre risiko.
 
-![Exciter](images/exciter.png)
+<img src="images/exciter.png" class="leftpict">
 
 Når den fungerer, gir den mer klarhet, mer definisjon og åpning i toppen. Hvis man isteden hører skarphet, spisshet (sibliance) og slitsom lyd, bør den dempes eller til og med fjernes. Som man sier:
 
@@ -771,8 +771,7 @@ Når den fungerer vil miksen åpner seg, gi mer romfølelse og mindre klumping i
 
 Her ser vi et bilde av den og dens parametre:
 
-![alt text](images/stereo.png)
-
+<img src="images/stereo.png" class="leftpict">
 
 #### Spread / Width
 

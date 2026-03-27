@@ -159,7 +159,10 @@ table caption {
 tbody {
     margin-top: 0.5em;
     border-bottom: 1px solid #dcddea;
-    background-color: #25272b;
+    /* background-color: #25272b; */
+    color: #829abc;
+    font-size: 0.94em;
+    font-family: sans-serif;
 }
 
 th {
@@ -167,11 +170,15 @@ th {
     border-bottom: 1px solid #dcddea;
     padding: 0.25em 0.5em 0.25em 0.5em;
     text-align: left;
-    background-color: #000000;
+    /* background-color: #0b0b32; */
+    color: #829abc;
+    font-size: 0.94em;
+    font-family: sans-serif;
+    padding: 0.25em 1em 0.25em 0.5em;
 }
 
 td {
-    padding: 0.125em 0.5em 0.25em 0.5em;
+    padding: 0.25em 1em 0.25em 0.5em;
 }
 
 header {
@@ -493,12 +500,21 @@ code span.wa {
     color: red
 }
 
-/* JRS test bilde */
-.center {
+/* JRS hovedbilde */
+.centerpict {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+
+.leftpict {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
 }
 
 /* JRS liste */
