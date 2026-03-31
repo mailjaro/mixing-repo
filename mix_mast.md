@@ -26,7 +26,7 @@ Det er også en del generelle tips i prosessen som er viktige:
 
 ---
 
-## Mastering
+## 🎛️ Mastering
 
 En vanlig problemstilling i mastering er at man ender opp med et produkt som er altfor lavt ift. profesjonell musikk. Man må skru opp lyden nesten mot maks for at volumet skal oppleves høyt. Selv om man har lagt seg så høyt som mulig uten clipping, blir sluttresultatet pulsete. (Clipping oppstår når lydsignalet blir høyere enn det digitale maksimumsnivået (0 dBFS). Da kuttes signaltoppene, lydbølger mister form og det oppstår forvrengning.)
 
@@ -374,7 +374,7 @@ En veldig nyttig test for en mix man kan gjøre i Logic:
 
 ---
 
-## Mixing
+## 🎚️ Mixing
 
 Vi skal nå se på mixingen. Den starter når alt er ferdig innspilt, ferdig strukturert og man har en fungerende grovmix. Man innleder med å sette Stereo Out-fader til 0.0 dB, panorerer alle tracks til senter og starter med alle spor-volum på av. (Enkelte effekter og plugins forutsetter at Stereo Out står på 0.0 dB.)
 
