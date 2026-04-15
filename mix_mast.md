@@ -1,4 +1,4 @@
-# 🎶 mixing og mastering
+# 🎶 Mixing og mastering
 
 <img src="images/mix.png" class="centerpict">
 
