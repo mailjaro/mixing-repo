@@ -1,1 +1,6 @@
 builds/
+configs/
+images/
+styles/
+runner.sh
+mix_mast.md
