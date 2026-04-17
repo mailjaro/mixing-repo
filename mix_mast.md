@@ -816,3 +816,9 @@ Tromme-loops er nyttige under komposisjon og i en tidlig fase av prosjektet. Men
 En løsning er å konverter loop til MIDI for å slippe å programmere alt fra scratch.
 
 En variant for de som er mer late, men som likevel ønsker variasjon eller mindre maskin-preg, er å automatiser litt volum på loopen, eller til og med endre timingen litt ved Flex Time / Flex Groove.
+
+## 📚 Andre hefter
+
+For andre hefter, se
+
+📘 [Min startside på GitHub](https://mailjaro.github.io/)
